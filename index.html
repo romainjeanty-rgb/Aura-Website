@@ -1,25 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/arua1.svg" sizes="48x48"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/style.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <img src="/aura.svg" href="index.html" width="100"/>
-      </a>
-      <a> vim</a>
-      <button onclick="toggleCart()">󰄐 cart</button>
-      <script>
-        function toggleCart() {
-          console.log('Cart toggled');
-        }
-      </script>
-    </header>
-    <div id="app"></div>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website with Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <a href="index.html"> <img src="/aura.svg" href="index.html" width="100"/>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+
+         <!-- Links -->
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition">About</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+        </div>
+        
+        <!-- Cart & Buy Button & Mobile menu -->
+        <div class="flex items-center space-x-4">
+          <!-- Buy Button -->
+          <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded transition">
+            Buy Now
+          </a>
+
+          <!-- Cart -->
+          <a href="#" class="relative text-gray-700 hover:text-blue-600 transition">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 7h12l-2-7M17 13l2 7M9 21a1 1 0 11-2 0 1 1 0 012 0zm8 0a1 1 0 11-2 0 1 1 0 012 0z"></path>
+            </svg>
+            <!-- Cart Badge -->
+            <span class="absolute top-0 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-600 rounded-full">0
+              
+            </span>
+          </a>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+      <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+      <!-- Buy Button in Mobile Menu -->
+      <a href="#" class="block px-4 py-2 mt-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Buy Now</a>
+    </div>
+  </nav>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
 </html>
