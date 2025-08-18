@@ -2,12 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/aura.svg" />
+    <link rel="icon" type="image/svg+xml" href="/arua1.svg" sizes="48x48"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
     <title>Vite App</title>
   </head>
   <body>
+    <header>
+      <a href="index.html">
+        <img src="/aura.svg" href="index.html" width="100"/>
+      </a>
+      <a> vim</a>
+      <button onclick="toggleCart()">󰄐 cart</button>
+      <script>
+        function toggleCart() {
+          console.log('Cart toggled');
+        }
+      </script>
+    </header>
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
