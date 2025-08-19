@@ -9,22 +9,38 @@
   </head>
 
   <body class="main-bg">
-    <!-- Navbar -->
     <div id="navbar-container"></div>
 
-    <div>
-      <img src="aura.svg" alt="Watch 1" class="logo-img" >
-      <div class="product-images">
-        <img src="watch1.png" alt="Watch 1" class="product-img" >
-        <img src="watch2.png" alt="Watch 2" class="product-img" >
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h2 class="hero-title">Luxury Meets Innovation</h2>
+          <p class="hero-text">Aura Cuffs, experience the future of wearable technology. Featuring a sleek design and advanced e-ink display, it offers a perfect blend of stylish art. Available in a slick rubber black.</p>
+          <a href="#shop" class="cta-button">Shop Now</a>
+        </div>
+        <div class="hero-image-container">
+          <img src="public/watch2.png" alt="Aura Cuff" class="hero-image" width="600">
+        </div>
       </div>
-    </div>
-    <div class="product-description">
-      <h1>Aura E-Ink Watch</h1>
-      <p>Experience the future of wearable technology with the Aura E-Ink Watch.</p>
-      <p>Featuring a sleek design and advanced e-ink display, it offers a perfect blend of stylelistc art.</p>
-      <p>Available in a slick rubber black.</p>  
-    </div>
+    </section>
+
+    <section id="features" class="features-section">
+      <h3 class="features-title">Why Aura Cuffs?</h3>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4 class="feature-heading">Upload Images</h4>
+          <p class="feature-text">Sync your favorite images directly from your phone to your cuff.</p>
+        </div>
+        <div class="feature-card">
+          <h4 class="feature-heading">Switch Instantly</h4>
+          <p class="feature-text">Change styles on the go with a simple swipe.</p>
+        </div>
+        <div class="feature-card">
+          <h4 class="feature-heading">Luxury Aesthetic</h4>
+          <p class="feature-text">Designed for trendsetters and creators who value elegance.</p>
+        </div>
+      </div>
+    </section>
 
     <canvas id="canvas" width="800" height="600"></canvas>
     <script src="src/canvas.js"></script>
