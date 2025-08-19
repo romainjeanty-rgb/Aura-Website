@@ -1,18 +1,32 @@
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import "src/navbar.css";
 
-header {
-  background-color: #808080;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 16px 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-body {
+body,
+.main-bg {
+  background-color: #f9fafb;
   margin: 0;
-  padding-top: 60px; /* Adjust to header height */
+  padding-top: 0;
+}
+.product-images {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.product-img {
+  width: 400px;
+}
+
+.logo-img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #6b7280;
 }
